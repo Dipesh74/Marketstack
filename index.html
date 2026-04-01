@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet"/>
-
+  <meta charset="UTF-8">
+  <title>Smart Stock Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    
+
+  <div class="container">
+    <h1>📊 Smart Stock Dashboard</h1>
+
+    <div class="search-box">
+      <input type="text" id="symbolInput" placeholder="Enter stock symbol (e.g., AAPL)">
+      <button onclick="getStockData()">Search</button>
+    </div>
+
+    <div id="loader" class="hidden">Loading...</div>
+
+    <div id="stockResult" class="card hidden">
+      <h2 id="stockName"></h2>
+      <p><strong>Price:</strong> $<span id="price"></span></p>
+      <p><strong>Date:</strong> <span id="date"></span></p>
+      <p><strong>Open:</strong> <span id="open"></span></p>
+      <p><strong>High:</strong> <span id="high"></span></p>
+      <p><strong>Low:</strong> <span id="low"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
