@@ -1,155 +1,141 @@
 # 📊 Smart Stock Dashboard
 
-A modern stock market dashboard built using React that provides real-time and historical stock data, powered by the Marketstack API.
+## 📌 Project Overview
+
+The **Smart Stock Dashboard** is a web application that allows users to search and view stock market data in a simple and user-friendly interface.
+It demonstrates the use of JavaScript, API integration, and modern UI design.
+
+---
+
+## 🎯 Objective
+
+The objective of this project is to:
+
+* Integrate a public API using JavaScript `fetch`
+* Display real-time or recent stock data
+* Implement search functionality
+* Use array methods for handling and processing data
+* Build a clean and responsive user interface
 
 ---
 
 ## 🚀 Features
 
 * 🔎 Search stocks by symbol (e.g., AAPL, TSLA)
-* 📈 View current stock price and key metrics
-* 📅 Historical stock data (daily prices)
-* 🌍 Global stock coverage
-* ⚡ Fast and responsive UI
-* 📊 Interactive charts (optional enhancement)
-* 🌙 Light/Dark mode (optional)
+* 📈 View latest stock price and details
+* 📅 Display stock data such as open, high, low, and date
+* ⚡ Dynamic UI updates without page reload
+* 🎨 Simple and responsive design using CSS
 
 ---
 
-## 🧠 Project Idea
+## 🛠️ Technologies Used
 
-This app allows users to explore stock market data in a simple and intuitive way. Instead of overwhelming users with raw numbers, the dashboard presents clean visuals and meaningful insights.
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend:** React.js
-* **Styling:** CSS / Tailwind CSS
-* **API:** Marketstack
-* **State Management:** React Hooks
-* **Charts (optional):** Chart.js / Recharts
+* **HTML** – Structure of the web app
+* **CSS** – Styling and layout
+* **JavaScript** – Logic and API integration
+* **Marketstack API** – Fetching stock market data
 
 ---
 
 ## 📡 API Used
 
-This project uses the Marketstack API to fetch stock data.
+This project uses the Marketstack API to retrieve stock data.
 
-### Base URL:
+* Base URL:
+  https://api.marketstack.com/v1/
 
-https://api.marketstack.com/v1/
+* Example Endpoint:
+  /eod?access_key=YOUR_API_KEY&symbols=AAPL
 
-### Example Endpoint:
+---
 
-```bash
-/eod?access_key=YOUR_API_KEY&symbols=AAPL
-```
+## ⚙️ How It Works
+
+1. User enters a stock symbol in the input field
+2. JavaScript sends a request to the API using `fetch`
+3. The API returns stock data in JSON format
+4. The data is processed and displayed on the UI
+
+---
+
+## 🧠 JavaScript Concepts Used
+
+* `fetch()` for API calls
+* **Async/Await** for handling asynchronous operations
+* **DOM Manipulation** to update UI dynamically
+* **Array High Order Functions** (like map/filter – can be extended for future features)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-src/
- ├── components/
- │     ├── SearchBar.js
- │     ├── StockCard.js
- │     ├── StockChart.js
- │     └── Loader.js
- ├── pages/
- │     └── Dashboard.js
- ├── services/
- │     └── api.js
- ├── App.js
- └── index.js
+project-folder/
+│── index.html
+│── style.css
+│── script.js
+│── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## ▶️ Setup Instructions
 
 1. Clone the repository:
 
-```bash
+```
 git clone https://github.com/your-username/smart-stock-dashboard.git
 ```
 
-2. Navigate to the project folder:
+2. Open the project folder:
 
-```bash
+```
 cd smart-stock-dashboard
 ```
 
-3. Install dependencies:
+3. Open `script.js` and add your API key:
 
-```bash
-npm install
+```
+const API_KEY = "your_api_key_here";
 ```
 
-4. Get your API key from Marketstack
+4. Run the project:
 
-5. Create a `.env` file:
-
-```env
-REACT_APP_API_KEY=your_api_key_here
-```
-
-6. Start the development server:
-
-```bash
-npm start
-```
+* Open `index.html` in your browser
 
 ---
 
-## 🔄 How It Works
+## 📊 Future Enhancements
 
-1. User enters a stock symbol
-2. App sends request to Marketstack API
-3. Data is fetched and stored in state
-4. UI updates dynamically to display stock details
-
----
-
-## 📊 Future Improvements
-
-* 📉 Advanced charting (candlestick charts)
+* 📉 Add stock charts and graphs
+* ⭐ Add watchlist feature
 * 🔔 Price alerts
-* ⭐ Watchlist feature
-* 📰 Financial news integration
-* 📱 Mobile optimization
+* 🌙 Dark/Light mode toggle
+* 📱 Improve mobile responsiveness
 
 ---
 
 ## ⚠️ Limitations
 
-* Free API tier may have request limits
-* Data may not be real-time (depends on plan)
+* Free API has request limits
+* Data may not be real-time
+* Requires valid stock symbol input
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
+Contributions are welcome. You can fork the repository and submit a pull request.
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
-
----
-
-## 🙌 Acknowledgements
-
-* Marketstack API for providing stock data
-* React community for awesome tools and libraries
+This project is for educational purposes.
 
 ---
 
 ## 💡 Inspiration
 
-Built to simplify stock tracking and make financial data accessible to everyone.
-
----
+This project was built to simplify stock market tracking and provide a clean interface for users to access financial data easily.
