@@ -46,7 +46,7 @@ This project uses the Marketstack API to retrieve stock data.
   https://api.marketstack.com/v1/
 
 * Example Endpoint:
-  /eod?access_key=YOUR_API_KEY&symbols=AAPL
+  /eod?access_key=d423b37af5677975831d02c798bb2376 &symbols=AAPL
 
 ---
 
@@ -85,7 +85,7 @@ project-folder/
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/smart-stock-dashboard.git
+git clone https://github.com/Dipesh74/smart-stock-dashboard.git
 ```
 
 2. Open the project folder:
@@ -97,7 +97,7 @@ cd smart-stock-dashboard
 3. Open `script.js` and add your API key:
 
 ```
-const API_KEY = "your_api_key_here";
+const API_KEY = d423b37af5677975831d02c798bb2376;
 ```
 
 4. Run the project:
