@@ -1,141 +1,32 @@
 # 📊 Smart Stock Dashboard
 
-## 📌 Project Overview
+A sleek, responsive web application for real-time stock market tracking. This project allows users to fetch End-of-Day (EOD) stock data using the Marketstack API.
 
-The **Smart Stock Dashboard** is a web application that allows users to search and view stock market data in a simple and user-friendly interface.
-It demonstrates the use of JavaScript, API integration, and modern UI design.
+## 🚀 Final Submission: Milestone 4
 
----
+This repository represents the final phase of the Individual Project.
 
-## 🎯 Objective
+### ✅ Completed Tasks:
+- **UI/UX Enhancement:** Implemented a modern, dark-themed dashboard using CSS3 Flexbox and Glassmorphism effects.
+- **Code Refactoring:** Optimized JavaScript with `async/await`, improved error handling, and implemented data formatting (dates/decimals).
+- **Deployment:** Live version hosted and accessible via GitHub Pages.
+- **Documentation:** Comprehensive README with setup instructions.
 
-The objective of this project is to:
+### 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **API:** [Marketstack API](https://marketstack.com/)
+- **Deployment:** GitHub Pages
 
-* Integrate a public API using JavaScript `fetch`
-* Display real-time or recent stock data
-* Implement search functionality
-* Use array methods for handling and processing data
-* Build a clean and responsive user interface
+### 📖 How to Use
+1. Clone the repository: `git clone <your-repo-link>`
+2. Open `index.html` in any modern web browser.
+3. Enter a stock ticker symbol (e.g., `AAPL`, `TSLA`, or `GOOGL`).
+4. Click **Search** to view current price, daily highs/lows, and the latest trading date.
 
----
+### 🔧 Installation & Setup
+No complex installation is required as this is a client-side application. 
+- Ensure you have a stable internet connection to fetch data from the API.
+- The project uses a dedicated API key for data retrieval.
 
-## 🚀 Features
-
-* 🔎 Search stocks by symbol (e.g., AAPL, TSLA)
-* 📈 View latest stock price and details
-* 📅 Display stock data such as open, high, low, and date
-* ⚡ Dynamic UI updates without page reload
-* 🎨 Simple and responsive design using CSS
-
----
-
-## 🛠️ Technologies Used
-
-* **HTML** – Structure of the web app
-* **CSS** – Styling and layout
-* **JavaScript** – Logic and API integration
-* **Marketstack API** – Fetching stock market data
-
----
-
-## 📡 API Used
-
-This project uses the Marketstack API to retrieve stock data.
-
-* Base URL:
-  https://api.marketstack.com/v1/
-
-* Example Endpoint:
-  /eod?access_key=d423b37af5677975831d02c798bb2376 &symbols=AAPL
-
----
-
-## ⚙️ How It Works
-
-1. User enters a stock symbol in the input field
-2. JavaScript sends a request to the API using `fetch`
-3. The API returns stock data in JSON format
-4. The data is processed and displayed on the UI
-
----
-
-## 🧠 JavaScript Concepts Used
-
-* `fetch()` for API calls
-* **Async/Await** for handling asynchronous operations
-* **DOM Manipulation** to update UI dynamically
-* **Array High Order Functions** (like map/filter – can be extended for future features)
-
----
-
-## 📂 Project Structure
-
-```
-project-folder/
-│── index.html
-│── style.css
-│── script.js
-│── README.md
-```
-
----
-
-## ▶️ Setup Instructions
-
-1. Clone the repository:
-
-```
-git clone https://github.com/Dipesh74/smart-stock-dashboard.git
-```
-
-2. Open the project folder:
-
-```
-cd smart-stock-dashboard
-```
-
-3. Open `script.js` and add your API key:
-
-```
-const API_KEY = d423b37af5677975831d02c798bb2376;
-```
-
-4. Run the project:
-
-* Open `index.html` in your browser
-
----
-
-## 📊 Future Enhancements
-
-* 📉 Add stock charts and graphs
-* ⭐ Add watchlist feature
-* 🔔 Price alerts
-* 🌙 Dark/Light mode toggle
-* 📱 Improve mobile responsiveness
-
----
-
-## ⚠️ Limitations
-
-* Free API has request limits
-* Data may not be real-time
-* Requires valid stock symbol input
-
----
-
-## 🤝 Contribution
-
-Contributions are welcome. You can fork the repository and submit a pull request.
-
----
-
-## 📜 License
-
-This project is for educational purposes.
-
----
-
-## 💡 Inspiration
-
-This project was built to simplify stock market tracking and provide a clean interface for users to access financial data easily.
+### 🌐 Live Demo
+[Insert Your GitHub Pages Link Here]

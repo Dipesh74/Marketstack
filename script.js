@@ -1,8 +1,9 @@
-const API_KEY = "d423b37af5677975831d02c798bb2376"; // replace with your Marketstack API key
-const BASE_URL = "http://api.marketstack.com/v1/eod";
+const API_KEY = "d423b37af5677975831d02c798bb2376"; 
+const BASE_URL = "https://api.marketstack.com/v1/eod";
 
 async function getStockData() {
-  const symbol = document.getElementById("symbolInput").value.toUpperCase();
+  const symbolInput = document.getElementById("symbolInput");
+  const symbol = symbolInput.value.trim().toUpperCase();
   const loader = document.getElementById("loader");
   const resultCard = document.getElementById("stockResult");
 
@@ -19,23 +20,23 @@ async function getStockData() {
     const data = await response.json();
 
     if (!data.data || data.data.length === 0) {
-      throw new Error("No data found");
+      alert("No data found for this symbol. Try AAPL or MSFT.");
+      return;
     }
 
     const stock = data.data[0];
 
     document.getElementById("stockName").innerText = stock.symbol;
-    document.getElementById("price").innerText = stock.close;
-    document.getElementById("date").innerText = stock.date;
-    document.getElementById("open").innerText = stock.open;
-    document.getElementById("high").innerText = stock.high;
-    document.getElementById("low").innerText = stock.low;
+    document.getElementById("price").innerText = stock.close.toFixed(2);
+    document.getElementById("date").innerText = new Date(stock.date).toLocaleDateString();
+    document.getElementById("open").innerText = stock.open.toFixed(2);
+    document.getElementById("high").innerText = stock.high.toFixed(2);
+    document.getElementById("low").innerText = stock.low.toFixed(2);
 
     resultCard.classList.remove("hidden");
-
   } catch (error) {
-    alert("Error fetching stock data");
-    console.error(error);
+    console.error("Error:", error);
+    alert("Failed to fetch data. Check your connection or API key.");
   } finally {
     loader.classList.add("hidden");
   }
